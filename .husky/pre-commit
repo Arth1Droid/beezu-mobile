@@ -1,0 +1,12 @@
+echo "Executando testes Flutter..."
+
+cd beezu_app || exit 1
+
+flutter test
+
+if [ $? -ne 0 ]; then
+  echo "❌ Testes falharam. Commit cancelado."
+  exit 1
+fi
+
+echo "✅ Testes passaram com sucesso."
